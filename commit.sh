@@ -1,5 +1,5 @@
 #!/bin/sh
-git pull master
+git pull
 git add .
 git commit . -m "Updated GIT365 log.txt"
 git push

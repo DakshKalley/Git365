@@ -16,3 +16,11 @@ if logPath.is_file():
     logFile.close()
     logFile = open(logPath)
     print(logFile.read())
+
+# Checks if Commiter is Executable
+if os.access('commit.sh', os.X_OK) != True:
+    print("Making commit file executable")
+    os.system('chmod 755 commit.sh')
+
+# Git Commiter
+os.system('./commit.sh')
